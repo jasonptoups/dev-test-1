@@ -1,0 +1,25 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  background: lightgrey;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover {
+  background: darkgrey;
+  cursor: pointer;
+}
+
+.question {
+  margin: 50px 0;
+}

@@ -15,21 +15,32 @@
       <h3>Question 1</h3>
       <p>Randomize the order of the following number set: "22, 14, 3, 4, 37, 6, 7, 81, 9, 10"</p>
       <button class="run-one">Run Answer 1</button>
-      <p>Answer: <span class="answer-one"></span></p>
+      <p><span class="bold">Answer:</span> <span class="answer-one"></span></p>
+      <p><span class="bold">Code:</span>
+        <p class="code">let shuffledArray = originalArray.sort((a, b) => 0.5 - Math.random())
+        </p>
+      </p>
     </div>
 
     <div class="question">
       <h3>Question 2</h3>
       <p>Find the mean of the following number set: "22, 14, 3, 4, 37, 6, 7, 81, 9, 10"</p>
       <button class="run-two">Run Answer 2</button>
-      <p>Answer: <span class="answer-two"></span></p>
+      <p><span class="bold">Answer:</span> <span class="answer-two"></span></p>
+      <p><span class="bold">Code:</span>
+        <p class="code">
+          let total = originalArray.reduce((accumulator, current) => accumulator + current) <br />
+          let count = originalArray.length <br />
+          this.answer2Result.innerHTML = total / count
+        </p>
+      </p>
     </div>
 
     <div class="question">
       <h3>Question 3</h3>
       <p>Fetch and parse the json data at http://bptest.net/devtest/data.php to produce the following table:</p>
       <button class="run-three">Run Answer 3</button>
-      <p>Answer:</p>
+      <p class="bold">Answer:</p>
       <table class="answer-three-table">
         <tr>
           <th>First Name</th>
@@ -38,13 +49,36 @@
           <th>Gender</th>
         </tr>
       </table>
+      <p><span class="bold">Code:</span>
+        <p class="code">
+            fetchData () { <br />
+              let APIData = [] <br />
+              fetch('http://bptest.net/devtest/data.php').then(res => { <br />
+                APIData = res.data <br />
+              }) <br />
+              APIData = hardData <br />
+              APIData.forEach((row, i) => { <br />
+                var newRow = this.table.insertRow((i + 1)) <br />
+                newRow.insertCell(0).innerHTML = row['first name'] <br />
+                newRow.insertCell(1).innerHTML = row['last name'] <br />
+                newRow.insertCell(2).innerHTML = row.email <br />
+                newRow.insertCell(3).innerHTML = row.gender <br />
+              }) <br />
+            }
+        </p>
+      </p>
     </div>
 
     <div class="question">
       <h3>Bonus</h3>
       <p class="bonus-sentence">Use the shortest possible regular expression or replacement method using php, ruby or javascript to put a smiley face after every word that ends in a vowel in this sentence.</p>
       <button class="run-bonus">Run Bonus</button>
-      <p>Answer: <span class="answer-bonus"></span></p>
+      <p><span class="bold">Answer:</span><span class="answer-bonus"></span></p>
+      <p><span class="bold">Code:</span>
+        <p class="code">
+          this.bonusResult.innerText = this.bonusSentence.replace(/[aeiou]\b/ig, '$& 😀')
+        </p>
+      </p>
     </div>
   </main>
   <script src="API-data.js"></script>

@@ -9,7 +9,7 @@ table, th, td {
 button {
   width: 100px;
   height: 30px;
-  background: lightgrey;
+  background: mediumaquamarine;
   border: none;
   text-align: center;
   text-decoration: none;
@@ -22,4 +22,15 @@ button:hover {
 
 .question {
   margin: 50px 0;
+}
+
+.code {
+  font-family: monospace;
+  background: lightgrey;
+  margin: 0 0 0 10px;
+  width: 700px;
+}
+
+.bold {
+  font-weight: 600;
 }

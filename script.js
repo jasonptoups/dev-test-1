@@ -40,7 +40,7 @@ class QuestionThree {
   }
 
   buildTable () {
-    fetch('http://bpbuild.com/devtest/data.php').then(res => res.json()).then(data => {
+    fetch('https://bpbuild.com/devtest/data.php').then(res => res.json()).then(data => {
       data.forEach((row, i) => {
         var newRow = this.table.insertRow((i + 1))
         newRow.insertCell(0).innerHTML = row.firstname

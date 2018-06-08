@@ -1,6 +1,6 @@
 let originalArray = [22, 14, 3, 4, 37, 6, 7, 81, 9, 10]
 
-// Question 1
+// Question 1 ***********************************
 class QuestionOne {
   constructor () {
     this.question1Button = document.querySelector('.run-one')
@@ -15,7 +15,7 @@ class QuestionOne {
 }
 const question1 = new QuestionOne()
 
-// Question 2
+// Question 2 ***********************************
 class QuestionTwo {
   constructor () {
     this.question2Button = document.querySelector('.run-two')
@@ -31,7 +31,7 @@ class QuestionTwo {
 }
 const question2 = new QuestionTwo()
 
-// Question 3
+// Question 3 ***********************************
 class QuestionThree {
   constructor () {
     this.question3Button = document.querySelector('.run-three')
@@ -53,7 +53,7 @@ class QuestionThree {
 }
 const question3 = new QuestionThree()
 
-// Bonus
+// Bonus ****************************************
 class Bonus {
   constructor () {
     this.bonusSentence = document.querySelector('.bonus-sentence').innerHTML

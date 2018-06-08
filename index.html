@@ -51,20 +51,17 @@
       </table>
       <p><span class="bold">Code:</span>
         <p class="code">
-            fetchData () { <br />
-              let APIData = [] <br />
-              fetch('http://bptest.net/devtest/data.php').then(res => { <br />
-                APIData = res.data <br />
+            buildTable () { <br />
+              fetch('http://bpbuild.com/devtest/data.php').then(res => res.json()).then(data => { <br />
+                data.forEach((row, i) => { <br />
+                  var newRow = this.table.insertRow((i + 1)) <br />
+                  newRow.insertCell(0).innerHTML = row.firstname <br />
+                  newRow.insertCell(1).innerHTML = row.lastname <br />
+                  newRow.insertCell(2).innerHTML = row.email <br />
+                  newRow.insertCell(3).innerHTML = row.gender <br />
+                }) <br />
               }) <br />
-              APIData = hardData <br />
-              APIData.forEach((row, i) => { <br />
-                var newRow = this.table.insertRow((i + 1)) <br />
-                newRow.insertCell(0).innerHTML = row['first name'] <br />
-                newRow.insertCell(1).innerHTML = row['last name'] <br />
-                newRow.insertCell(2).innerHTML = row.email <br />
-                newRow.insertCell(3).innerHTML = row.gender <br />
-              }) <br />
-            }
+            }          
         </p>
       </p>
     </div>

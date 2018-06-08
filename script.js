@@ -40,21 +40,14 @@ class QuestionThree {
   }
 
   buildTable () {
-    this.fetchData()
-  }
-
-  fetchData () {
-    let APIData = []
-    fetch('http://bptest.net/devtest/data.php').then(res => {
-      APIData = res.data
-    })
-    APIData = hardData
-    APIData.forEach((row, i) => {
-      var newRow = this.table.insertRow((i + 1))
-      newRow.insertCell(0).innerHTML = row['first name']
-      newRow.insertCell(1).innerHTML = row['last name']
-      newRow.insertCell(2).innerHTML = row.email
-      newRow.insertCell(3).innerHTML = row.gender
+    fetch('http://bpbuild.com/devtest/data.php').then(res => res.json()).then(data => {
+      data.forEach((row, i) => {
+        var newRow = this.table.insertRow((i + 1))
+        newRow.insertCell(0).innerHTML = row.firstname
+        newRow.insertCell(1).innerHTML = row.lastname
+        newRow.insertCell(2).innerHTML = row.email
+        newRow.insertCell(3).innerHTML = row.gender
+      })
     })
   }
 }
